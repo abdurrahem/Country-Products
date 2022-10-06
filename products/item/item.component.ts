@@ -9,7 +9,7 @@ export class ItemComponent implements OnInit {
 @Input()src:string='';
 @Input()name:string='';
 @Input()price:number=0;
-
+@Input()currency:string='';
   constructor() { }
 
   ngOnInit(): void {

@@ -16,6 +16,7 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    ////get the countries data from API
     this.productsService.getCountries().subscribe(countries => {
       this.countries = countries;
     });
@@ -23,8 +24,14 @@ export class HeaderComponent implements OnInit {
 
   selectCountry(country_id: number) {
     //navigate
-    this.router.navigate([CONFIG.products.route],{queryParams:{country_id:country_id || 0}})
-    console.log(country_id);
+    
+    this.router.navigate([CONFIG.products.route],
+      {
+        queryParams:{
+        country_id:country_id || 0,
+        currency:this.countries.find(country => country.country_id==country_id)?.currency || ""
+      }})
+    // console.log("country "+this.countries.find(el => el.country_id==country_id)?.currency);
     
   }
 
