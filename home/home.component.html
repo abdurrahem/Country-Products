@@ -1,0 +1,7 @@
+<p>home works!</p>
+<div class="select-container">
+    <select  (change)="selectCountry(+country.value)" #country>
+        <option value="select" disabled selected>select country</option>
+      <option *ngFor="let country of countries " [value]="country.country_id">{{country.name}}</option>
+    </select>
+  </div>
