@@ -1,1 +1,6 @@
 <p>products works!</p>
+<div class="container">
+  <div class="card" *ngFor="let product of countryProducts">
+    <app-item [src]="product.icon" [name]="product.name" [price]="product.price"></app-item>
+  </div>
+</div>

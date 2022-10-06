@@ -11,7 +11,7 @@ export class ProductsService {
   countries:ICountry[]=[];
   products:IProduct[]=[];
   constructor(private http:HttpClient) { }
-
+ // get countries data from countries API
   getCountries(){
    return this.http.get(API.countries).pipe(
     map((res:any)=>{
@@ -29,7 +29,8 @@ export class ProductsService {
     })
    );
   }
-  getProducts(){
+  //get all products from items API 
+  getProducts(){ 
     return this.http.get(API.products).pipe(
       map((res:any)=>{
          const result:IProduct[]=[];
@@ -46,5 +47,16 @@ export class ProductsService {
          return result;
       })
      )
+  }
+  // products filtering du to country_id 
+  getRelatedToCountryProducts(country_id:number){ 
+    const result:IProduct[]=[];
+    this.products.forEach(product => {
+      if(product.country_id==country_id){
+        result.push(product);
+      }
+    });
+
+   return result;
   }
 }

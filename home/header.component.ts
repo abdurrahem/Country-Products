@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router } from '@angular/router';
 import { CONFIG, ICountry, ProductsService } from '../shared';
 
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  selector: 'app-header',
+  templateUrl: './header.component.html',
+  styleUrls: ['./header.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class HeaderComponent implements OnInit {
   countries: ICountry[] = [];
   constructor(private productsService: ProductsService,private router:Router) {
     // this.route.data.subscribe(el => this.countries=el['countries']);
@@ -23,7 +23,7 @@ export class HomeComponent implements OnInit {
 
   selectCountry(country_id: number) {
     //navigate
-    this.router.navigate([CONFIG.products.route],{queryParams:{country_id:country_id}})
+    this.router.navigate([CONFIG.products.route],{queryParams:{country_id:country_id || 0}})
     console.log(country_id);
     
   }
