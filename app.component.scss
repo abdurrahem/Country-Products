@@ -1,0 +1,13 @@
+.container{
+    display: flex;
+    align-items: baseline;
+    flex-direction: column;
+}
+.header{
+    padding:20px;
+    align-self: flex-start;
+}
+.list{
+    align-self: flex-end;
+    padding:20px;
+}
