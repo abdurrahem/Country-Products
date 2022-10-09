@@ -3,13 +3,14 @@ import { ICountry ,IProduct} from '..';
 import { HttpClient } from '@angular/common/http';
 import { API } from '..';
 import { map } from 'rxjs/operators';
-
+enum Currency {Kuwait='KWD',UAE='AED',Bahrain='BHD',KSA='SAR',Qatar='QAR'};
 @Injectable({
   providedIn: 'root'
 })
 export class ProductsService {
   countries:ICountry[]=[];
   products:IProduct[]=[];
+  
   constructor(private http:HttpClient) { }
  // get countries data from countries API
   getCountries(){
@@ -22,10 +23,11 @@ export class ProductsService {
           country_code:country['country_code'],
           name:country['name'],
           currency:country['currency']
-         })
+         });
        });
        this.countries=result;
        return result;
+       
     })
    );
   }
