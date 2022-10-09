@@ -1,5 +1,11 @@
 <div class="container">
-  <div class="card" *ngFor="let product of countryProducts">
-    <app-item [src]="product.icon" [name]="product.name" [price]="product.price" [currency]="currency"></app-item>
-  </div>
+  <div class="title">
+    <h1>Items List</h1>
+ </div>
+    <div class="list">
+      <div class="card" *ngFor="let product of countryProducts">
+        <app-item [src]="product.icon" [name]="product.name" [price]="product.price" [currency]="currency" [country_code]="country_code"></app-item>
+      </div>
+    </div>
+  
 </div>

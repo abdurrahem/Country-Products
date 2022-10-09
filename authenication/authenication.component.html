@@ -1,2 +1,26 @@
-<p>authenication works!</p>
-
+<!-- <div>
+    <form [formGroup]="authform" (ngSubmit)="login()">
+        <label for="username">Email</label>
+        <input type="text" name="username" formControlName="username">
+        <label for="password">Password</label>
+        <input type="text" name="password" formControlName="password">
+        <input type="submit" value="login" [disabled]="authform.invalid">
+    </form> -->
+    <div  *ngIf="!isLoggedIn" class="container mt-3">
+        <h2>Login:</h2>
+        <form [formGroup]="authform" (ngSubmit)="login()">
+          <div class="mb-3 mt-3">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" formControlName="email">
+          </div>
+          <div class="mb-3">
+            <label for="pwd">Password:</label>
+            <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="password" formControlName="password">
+          </div>
+          <button type="submit" class="btn btn-primary" [disabled]="authform.invalid">login</button> 
+            &nbsp;&nbsp;<span class="text-danger">{{error}}</span> 
+        </form>
+      </div>
+      <div *ngIf="isLoggedIn">
+        <h1 style="text-align: center;" class="text-success">Select your product from the list please..</h1>
+      </div>

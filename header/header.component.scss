@@ -1,0 +1,12 @@
+$color:lightgray;
+$margin:60px;
+.select-container{
+    display: flex;
+    justify-content:flex-end;
+    flex-wrap: wrap;
+    padding: $margin;
+    margin-left: $margin;
+    margin-right: $margin;
+    border:1px solid $color;
+}
+
