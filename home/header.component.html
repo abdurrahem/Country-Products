@@ -1,5 +1,6 @@
 <p>home works!</p>
 <div class="select-container">
+    <!-- <span><input type="button" data-bs-toggle="modal" data-bs-target="#myModal">login</span> -->
     <select  (change)="selectCountry(+country.value)" #country>
         <option value="select" disabled selected>select country</option>
       <option *ngFor="let country of countries " [value]="country.country_id">{{country.name}}</option>
