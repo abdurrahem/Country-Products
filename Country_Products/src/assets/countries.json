@@ -1,0 +1,32 @@
+[
+    {
+        "id":1,
+        "country_code":"ku",
+        "name":"Kuwait",
+        "currency":"KWD"
+    },
+    {
+        "id":2,
+        "country_code":"ar-AE",
+        "name":"United Arab Emirates",
+        "currency":"AED"
+    },
+    {
+        "id":3,
+        "country_code":"ar-BH",
+        "name":"Bahrain",
+        "currency":"BHD"
+    },
+    {
+        "id":4,
+        "country_code":"ar-SA",
+        "name":"Saudia Arabis",
+        "currency":"SAR"
+    },
+    {
+        "id":5,
+        "country_code":"ar-QA",
+        "name":"Qatar",
+        "currency":"QAR"
+    }
+]
