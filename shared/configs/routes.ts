@@ -1,3 +1,5 @@
 export const CONFIG={
-    products:{name:'products',route:'/products'}
+    // home:{name:'home',route:'/home'},
+    products:{name:'products',route:'/products'},
+    login:{name:'login',route:'/authenication'}
 }

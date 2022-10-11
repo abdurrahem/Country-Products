@@ -1,6 +1,13 @@
 <div class="select-container">
+   <div *ngIf="isLoggedIn">
+    <button (click)="logout()">logout</button>
+   </div>
+   <div *ngIf="!isLoggedIn">
+    <button (click)="login()">login</button>
+   </div>
     <select  (change)="selectCountry(+country.value)" #country>
         <option value="select" disabled selected>select country</option>
       <option *ngFor="let country of countries " [value]="country.country_id">{{country.name}}</option>
     </select>
   </div>
+  

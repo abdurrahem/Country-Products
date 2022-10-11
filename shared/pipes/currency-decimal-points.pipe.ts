@@ -2,7 +2,6 @@ import { formatCurrency,getCurrencySymbol } from '@angular/common';
 import { Pipe, PipeTransform } from '@angular/core';
 import { registerLocaleData } from '@angular/common';
 import localeKuwait from '@angular/common/locales/ku';
-
 import localeBahrain from '@angular/common/locales/ar-BH';
 import localeSaudia from '@angular/common/locales/ar-SA';
 import localeQatar from '@angular/common/locales/ar-QA';

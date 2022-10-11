@@ -16,6 +16,7 @@ export class ProductsComponent implements OnInit {
  country_code:string='';
                               
   constructor(private productsService:ProductsService,private route:ActivatedRoute) { //using resolver to get data every time products loaded
+    
     this.route.data.subscribe(product => 
       {
         this.allProducts=product['products']//// read from resolver
